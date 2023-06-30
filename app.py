@@ -11,10 +11,11 @@ app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
 CORS(app, supports_credentials=True )
 
+uri = "mongodb+srv://lodhanaitik07:RcWLZ9BHE_v.Y*S@user.ss1vpyy.mongodb.net/?retryWrites=true&w=majority"
 
 
 # Connecting to MongoDB
-client = MongoClient('localhost', 27017)
+client = MongoClient(uri, server_api=ServerApi('1'))
 
 db = client.get_database('userdata')
 userd = db.user
