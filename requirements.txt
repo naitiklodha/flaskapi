@@ -4,3 +4,4 @@ flask_cors
 flask_bcrypt
 gunicorn
 redis
+flask_session
